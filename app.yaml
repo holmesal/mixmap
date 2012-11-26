@@ -1,0 +1,27 @@
+application: mixmap
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+default_expiration: "1m"
+
+
+
+handlers:
+- url: /
+  script: mixmap.app
+  
+#static directories
+- url: /img
+  static_dir: img
+- url: /css
+  static_dir: css
+- url: /js
+  static_dir: js
+- url: /beta
+  static_dir: beta
+
+
+libraries:
+- name: jinja2
+  version: latest
